@@ -36,7 +36,11 @@ Init Method configuration=======================================================
 
 Destroy Method configuration================================================================>'
 
-	<bean id="myCoach" class="com.naren.springdemo.TrackCoach" scope="prototype" init-method="doMyStuff" destroy-method="destroyMyDoStuff">
+	<bean id="myCoach" class="com.naren.springdemo.TrackCoach" init-method="doMyStuff" destroy-method="destroyMyDoStuff">
+
+// Destroy method didn't work with scope="prototype" 
+
+
 
 
 
