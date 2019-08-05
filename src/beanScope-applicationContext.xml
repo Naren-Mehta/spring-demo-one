@@ -10,20 +10,15 @@
 
 	<!-- Define your beans here -->
 	<bean id="myFortune"
-		class="com.naren.springdemo.HappyFortuneService" scope="singleton"></bean>
+		class="com.naren.springdemo.HappyFortuneService"></bean>
 
 
 	<!-- Define your beans here -->
-	<bean id="myCoach" class="com.naren.springdemo.TrackCoach" scope="prototype">
-
-	<!-- set up constructure injection -->
-		<constructor-arg ref="myFortune"/>
+	<bean id="myCoach" class="com.naren.springdemo.TrackCoach"
+		scope="prototype">
+		<!-- set up constructure injection -->
+		<constructor-arg ref="myFortune" />
 	</bean>
-	
-	<bean id="myCricketCoach" class="com.naren.springdemo.CricketCoach">
-	<property name="fortuneService" ref="myFortune"></property>
-	</bean>
-
 
 
 

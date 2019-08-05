@@ -10,11 +10,11 @@
 
 	<!-- Define your beans here -->
 	<bean id="myFortune"
-		class="com.naren.springdemo.HappyFortuneService"></bean>
+		class="com.naren.springdemo.HappyFortuneService" scope="singleton"></bean>
 
 
 	<!-- Define your beans here -->
-	<bean id="myCoach" class="com.naren.springdemo.TrackCoach">
+	<bean id="myCoach" class="com.naren.springdemo.TrackCoach" scope="prototype">
 
 	<!-- set up constructure injection -->
 		<constructor-arg ref="myFortune"/>
